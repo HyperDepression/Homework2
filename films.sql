@@ -36,7 +36,6 @@ CREATE TABLE films(
 	id serial PRIMARY KEY,
 	name varchar(32) NOT NULL,
 	year integer,
-	country varchar(16),
 	slogan text,
 	budget integer,
 	marketing integer,
@@ -74,6 +73,6 @@ CREATE TABLE film_country(
 );
 	
 CREATE TABLE film_genre(
-	filmId integer REFERENCES films (id,
+	filmId integer REFERENCES films (id),
 	genreId integer REFERENCES genres (id)
 );
